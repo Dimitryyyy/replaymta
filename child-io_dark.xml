@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style title="iO Dark Mode" description="Feel the energy" user_selectable="1" base_version_id="2010170" export_version="2">
+  <templates>
+    <template title="iodark.less" type="public" addon_id="" version_id="0" version_string=""><![CDATA[.uix_welcomeSection .uix_welcomeSection__inner .button.button--cta {box-shadow: none;}]]></template>
+  </templates>
+  <properties>
+    <property property_name="paletteColor1" group_name="palette" title="Color 1" description="" property_type="value" value_type="color" depends_on="" value_group="primary" display_order="1000" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"#313742"</value>
+    </property>
+    <property property_name="paletteColor2" group_name="palette" title="Color 2" description="" property_type="value" value_type="color" depends_on="" value_group="primary" display_order="1100" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"tint(@xf-paletteColor1, 5%)"</value>
+    </property>
+    <property property_name="paletteColor3" group_name="palette" title="Color 3" description="" property_type="value" value_type="color" depends_on="" value_group="primary" display_order="1200" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"tint(@xf-paletteColor2, 2%)"</value>
+    </property>
+    <property property_name="paletteColor4" group_name="palette" title="Color 4" description="" property_type="value" value_type="color" depends_on="" value_group="primary" display_order="1300" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"#292e39"</value>
+    </property>
+    <property property_name="paletteNeutral1" group_name="palette" title="Neutral 1" description="" property_type="value" value_type="color" depends_on="" value_group="neutral" display_order="3000" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"desaturate(rgb(140, 156, 189), 10%)"</value>
+    </property>
+    <property property_name="paletteNeutral2" group_name="palette" title="Neutral 2" description="" property_type="value" value_type="color" depends_on="" value_group="neutral" display_order="3100" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"desaturate(rgb(184, 196, 224), 10%)"</value>
+    </property>
+    <property property_name="paletteNeutral3" group_name="palette" title="Neutral 3" description="" property_type="value" value_type="color" depends_on="" value_group="neutral" display_order="3200" addon_id="XF">
+      <value_parameters>hidePalette=true</value_parameters>
+      <value>"desaturate(rgb(222, 229, 242), 10%)"</value>
+    </property>
+    <property property_name="styleType" group_name="palette" title="Style type" description="This defines the general type of style in use based on whether the content is placed on a light or dark background. This may change how colors are selected in certain scenarios." property_type="value" value_type="radio" depends_on="" value_group="setup" display_order="100" addon_id="XF">
+      <value_parameters>light={{ phrase('light') }}
+dark={{ phrase('dark') }}</value_parameters>
+      <value>"dark"</value>
+    </property>
+    <property property_name="uix_additionalCss" group_name="uix_globalSettings" title="List of additional css templates to include" description="A comma separated list of additional CSS/less templates to load. Requires the .css or .less suffix" property_type="value" value_type="string" depends_on="" value_group="" display_order="400" addon_id="">
+      <value>"io.less,iodark.less"</value>
+    </property>
+    <property property_name="uix_imagePath" group_name="basic" title="Image path" description="Sets the path to images for the theme." property_type="value" value_type="string" depends_on="" value_group="" display_order="10" addon_id="">
+      <value>"styles/io"</value>
+    </property>
+    <property property_name="uix_messageControlHover" group_name="message" title="Message control (hover)" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="20060" css_components="text,background,border,padding,extra" addon_id="">
+      <value>{
+    "color": "@xf-textColorDimmed",
+    "background-color": "fade(@xf-textColorDimmed, 10%)"
+}</value>
+    </property>
+    <property property_name="uix_nodeBody" group_name="nodeList" title="Node body" description="Styles the individual node body" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="text,background,border,border_radius,padding,extra" addon_id="">
+      <value>{
+    "background-color": "@xf-contentBg",
+    "extra": "overflow: hidden;\nborder-radius: @xf-borderRadiusMedium;"
+}</value>
+    </property>
+    <property property_name="uix_nodeBodyHover" group_name="nodeList" title="Node body (hover)" description="Adds a hover state to nodes" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="background,border,extra" addon_id="">
+      <value>{
+    "background-color": "@xf-contentAltBg",
+    "extra": "position: relative;"
+}</value>
+    </property>
+  </properties>
+</style>
